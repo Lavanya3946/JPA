@@ -1,6 +1,5 @@
 package com.xworkz.hotel.runner;
 
-import com.xworkz.hotel.entity.Hotel2Entity;
 import com.xworkz.hotel.entity.Hotel5Entity;
 
 import javax.persistence.EntityManager;
