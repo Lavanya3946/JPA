@@ -11,6 +11,12 @@ import javax.persistence.*;
 @Entity
 @Data
 @Table(name = "pg_table")
+@NamedQuery(name="getDataByName",query="select pg_table from PgEntity pg_table where  pg_table.name=:name")
+@NamedQuery(name="getDataByRent",query="select pg_table from PgEntity pg_table where  pg_table.rent=:rent")
+@NamedQuery(name="getDataBySharing",query="select pg_table from PgEntity pg_table where  pg_table.sharing=:sharing")
+
+
+
 
 public class PgEntity {
     @Id

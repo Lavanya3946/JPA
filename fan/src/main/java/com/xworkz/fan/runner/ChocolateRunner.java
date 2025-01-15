@@ -12,6 +12,7 @@ public class ChocolateRunner {
     public static void main(String[] args) {
         EntityManagerFactory entityManagerFactory= Persistence.createEntityManagerFactory("fan");
         EntityManager entityManager= entityManagerFactory.createEntityManager();
+
         List<ChocolatesEntity>chocolatesEntities=new ArrayList<>();
         chocolatesEntities.add(new ChocolatesEntity(null,"dairymilk",20));
         chocolatesEntities.add(new ChocolatesEntity(null,"dairymilk silk",150));
