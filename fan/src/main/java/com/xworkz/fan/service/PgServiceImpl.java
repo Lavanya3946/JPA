@@ -19,7 +19,7 @@ public class PgServiceImpl implements PgService {
 
     @Override
     public Boolean getById(Integer id) {
-        PgEntity pgEntity=pgRepo.getDataById(id);
+        PgEntity pgEntity = pgRepo.getDataById(id);
         System.out.println(pgEntity);
         return null;
     }
@@ -37,5 +37,37 @@ public class PgServiceImpl implements PgService {
     @Override
     public void getBySharing(Integer sharing) {
         pgRepo.getDataBySharing(sharing);
+    }
+
+    @Override
+    public void updateRentByName(Integer rent, String name) {
+        PgEntity pg = pgRepo.updateDataByName(rent, name);
+        if (pg != null) {
+            System.out.println("rent updated succesfully.." + pg);
+        } else {
+            System.out.println("rent not updated");
+        }
+    }
+
+    @Override
+    public int updateSharingByRent(Integer sharing, Integer rent) {
+        int row = pgRepo.updateByRent(sharing, rent);
+        if (row > 0) {
+            System.out.println("no of updated sharing : " + row);
+        } else {
+            System.out.println("not updated");
+        }
+        return row;
+    }
+
+    @Override
+    public int updateNameById(String name, Integer id) {
+        int row = pgRepo.updateById(name, id);
+        if (row > 0) {
+            System.out.println("no of names updated : " + row);
+        } else {
+            System.out.println("names not updated..");
+        }
+        return row;
     }
 }

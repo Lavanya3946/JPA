@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
-  <artifactId>charger</artifactId>
+  <artifactId>metrostation</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>charger Maven Webapp</name>
+  <name>metrostation Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
     <hibernate-version>5.6.15.Final</hibernate-version>
@@ -35,6 +35,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>charger</finalName>
+    <finalName>metrostation</finalName>
   </build>
 </project>
